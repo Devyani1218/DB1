@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"  />
+   
+    <style>
+        body{
+            background-image: url( " https://www.istockphoto.com/vector/abstract-of-pink-living-coral-color-sky-background-gm1094721986-293825839 " );
+        }
+    </style>
+     
+    <title>Login</title>
+</head>
+<body>
+    
+                 
+    <ul> 
+            <% if(messages.success_message) { %>
+                <li><%= messages.success_message %> </li>
+
+           <% } %>
+
+    </ul>
+
+    <ul>
+        <% if(messages.error) { %>
+        <li><%=messages.error %></li>
+    <% } %>
+    </ul>
+  <div class="bg-img">
+    <form action="/users/login" method="post"  class="body" >
+        <h1  >Login</h1>
+       
+        <div >
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email" placeholder="Please Enter Mail id" required>
+    
+        </div>
+        <div>
+            <label for="password"><b>Password</b></label>
+            <input type="password" id="password" name="password" placeholder="Please Enter password" required>
+        </div>
+        <div>
+            <button type="submit" class="btn">Login</button>
+        </div>
+        <a href="/users/register">Please Registered yourself </a>
+        
+    </form>
+</div>
+</body>
+</html>
